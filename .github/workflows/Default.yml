@@ -1,0 +1,22 @@
+#include <ff.au3>
+
+If _FFConnect(Default, Default, 3000) Then
+    ; open a page
+    _FFOpenURL("http://ff-au3-example.thorsten-willert.de/")
+    Sleep(3000)
+    ; disconnect from FireFox
+    If _FFDisConnect() Then MsgBox(64, "", "Disconnected from FireFox!")
+Else
+    MsgBox(64, "", "Can't connect to FireFox!")
+EndIf
+and i Keep getting an error message
+
+_FFConnect: OS: WIN_81 WIN32_NT 9600 
+_FFConnect: AutoIt: 3.3.12.0
+_FFConnect: FF.au3: 0.6.0.1b-14
+_FFConnect: IP: 127.0.0.1
+_FFConnect: Port:   4242
+_FFConnect: Delay:  2ms
+_FFConnect: Socket:     612
+
+__FFWaitForRepl ==> Timeout: 10012ms > 10000ms $iTimeOut
